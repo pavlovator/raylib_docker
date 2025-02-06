@@ -5,8 +5,8 @@
 
 int main() {
     Color GREY = {29, 29, 29, 255};
-    const int WINDOW_WIDTH = 750;
-    const int WINDOW_HEIGHT = 750;
+    const int WINDOW_WIDTH = 1000;
+    const int WINDOW_HEIGHT = 1000;
     const int CELL_SIZE = 5;
     int FPS = 12;
     Simulation simulation(WINDOW_WIDTH, WINDOW_HEIGHT, CELL_SIZE);
@@ -15,7 +15,6 @@ int main() {
     // Simulation Loop
     while (!WindowShouldClose()) {
         // 1. Event Handling
-
         if (IsMouseButtonDown(MOUSE_BUTTON_LEFT)) {
             Vector2 mouse_position = GetMousePosition();
             int row = mouse_position.x / CELL_SIZE;
@@ -50,6 +49,8 @@ int main() {
         BeginDrawing();
 	    ClearBackground(GREY);
         simulation.draw();
+    
+        DrawText(TextFormat("Target FPS: %i \nCurrent FPS: %i", FPS, GetFPS()), 20, 20, 30, RED);
         EndDrawing();
     }    
 
