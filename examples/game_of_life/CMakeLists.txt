@@ -9,7 +9,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 
 # Specify the source files
-set(SOURCES main.cpp)
+set(SOURCES main.cpp grid.cpp simulation.cpp)
 
 # Add the Raylib package (You might need to set the path if Raylib is not installed globally)
 find_package(raylib REQUIRED)
