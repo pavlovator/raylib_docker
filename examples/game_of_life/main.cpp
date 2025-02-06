@@ -1,3 +1,5 @@
+// Code taken from https://github.com/educ8s/CPP-Game-Of-Life-with-raylib
+
 #include <raylib.h>
 #include "simulation.hpp"
 
